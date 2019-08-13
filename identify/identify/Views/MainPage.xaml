@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             mc:Ignorable="d"
+             x:Class="identify.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="What is This?"
+                   FontSize="Header"
+                   FontFamily="{StaticResource Key=Bodoni}"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#82D3D3"
+                   />
+            <forms:AnimationView x:Name="AnimationView"
+                         Animation="questionmark.json"
+                         Loop="True"
+                         AutoPlay="True"
+                         VerticalOptions="StartAndExpand"
+                         HorizontalOptions="FillAndExpand" />
+            <Label Text="Press the capture button to capture an image"
+                   Margin="60, 10, 60, 0"
+                   FontSize="Large"
+                   LineBreakMode="WordWrap"
+                   MaxLines="2" 
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Take a Picture"
+                    Clicked="Button_Clicked"
+                    Margin="20,20, 20, 150"
+                    CornerRadius="20"
+                    BackgroundColor="#82D3D3"
+                    TextColor="White"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
